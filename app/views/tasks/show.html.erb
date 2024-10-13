@@ -1,0 +1,29 @@
+<div class= "m-2 p-2">
+  <h2><%= @task.title %></h2>
+  <div class="border mb-3 py-3 ps-3" style="background-color: #F5F5F5;">
+    <p class="my-auto"><%= @task.details %></p>
+  </div>
+
+  <% if @task.completed %>
+      <div class="d-flex align-items-center">
+        <i class="fa-regular fa-square-check"></i>
+        <p class="my-auto ms-1">This task is completed</p>
+      </div>
+  <% else %>
+      <div class="d-flex align-items-center">
+        <i class="fa-regular fa-square"></i>
+        <p class="my-auto">This task is not completed yet</p>
+      </div>
+  <% end %>
+
+  <hr />
+
+  <div class="d-flex">
+    <div>
+    <%= link_to "Edit this task", edit_restaurant_path %>
+    </div>
+    <div class="ms-3">
+    <%= link_to "Back to list", tasks_path %>
+    </div>
+  </div>
+</div>

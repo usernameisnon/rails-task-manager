@@ -1,0 +1,17 @@
+<div class= "m-2 p-2">
+  <h1>Edit task</h1>
+
+  <%= form_with model: @task do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+    <%= f.check_box :completed %>
+    <%= f.label :completed, "Completed" %>
+    <%= f.submit %>
+  <% end %>
+
+  <hr />
+
+  <%= link_to "Back to list", tasks_path %>
+</div>
